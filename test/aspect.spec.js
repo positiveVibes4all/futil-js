@@ -1,5 +1,6 @@
 import _ from 'lodash/fp'
 import chai from 'chai'
+import jest from 'jest'
 import chaiAsPromised from 'chai-as-promised'
 import { aspects, aspect, aspectSync } from '../src'
 import Promise from 'bluebird'
@@ -95,7 +96,7 @@ describe('Aspect Functions', () => {
     // Try to handle the case for mobile safari browers with error:
     // Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()"
     // is called; if returning a Promise, ensure it resolves.
-    .timeout(10000)
+   
   it('should support synchronous aspects', () => {
     let x = 1
     let y = 0
@@ -109,7 +110,7 @@ describe('Aspect Functions', () => {
     })
     f()
     expect(y).to.equal(2)
-  })
+  }, 10000)
   it('should mark deprecated methods on state', () => {
     let fn = aspects.deprecate('test', '1.2.3', 'something else')(() => {})
 

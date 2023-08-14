@@ -93,10 +93,10 @@ describe('Aspect Functions', () => {
     await Promise.delay(15)
     expect(f.state.status).to.equal(null)
   })
-    // Try to handle the case for mobile safari browers with error:
-    // Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()"
-    // is called; if returning a Promise, ensure it resolves.
-   
+  // Try to handle the case for mobile safari browers with error:
+  // Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()"
+  // is called; if returning a Promise, ensure it resolves.
+
   it('should support synchronous aspects', () => {
     let x = 1
     let y = 0

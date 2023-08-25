@@ -8,15 +8,12 @@ module.exports = {
   coverageProvider: 'v8',
   coverageReporters: ['lcov'],
   setupFilesAfterEnv: ['./test/setup/init.js'],
-  collectCoverageFrom: [
-    '<rootDir>/src/**/*.js',
-    '!<rootDir>/src/**/*.test.js',
-  ],
+  collectCoverageFrom: ['<rootDir>/src/**/*.js', '!<rootDir>/src/**/*.test.js'],
   projects: [
     {
       displayName: 'test',
-      testMatch: ['<rootDir>/test/*.js']
-    },  
+      testMatch: ['<rootDir>/test/*.js'],
+    },
   ],
   reporters: ['default', ['github-actions', { silent: false }]],
 }

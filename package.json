@@ -7,7 +7,7 @@
     "docs/beta"
   ],
   "scripts": {
-    "build": "webpack",
+    "build": "webpack ",
     "danger": "duti",
     "test": "babel-node ./node_modules/mocha/bin/_mocha --require ./test/init.js",
     "test:watch": "chokidar 'src/*.js' 'test/*.js' -c 'yarn test'",

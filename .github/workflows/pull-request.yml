@@ -26,23 +26,18 @@ jobs:
         run: yarn install --immutable
 
       - name: Lint
-        uses: wearerequired/lint-action@v2
-        with:
-          auto_fix: true
-          eslint: true
-          eslint_command_prefix: yarn
-          prettier: true
-          prettier_command_prefix: yarn
+        run: yarn lint:ci
 
       - name: Test
-        run: yarn run jest --ci --reporters github-actions --reporters summary --coverage .
+        run: yarn cicoverage
         env:
           NODE_OPTIONS: '--no-warnings --experimental-vm-modules'
 
-      - name: Report Coverage
-        uses: romeovs/lcov-reporter-action@2a28ec3e25fb7eae9cb537e9141603486f810d1a
+      - name: NYC Coverage Report          
+        uses: Tintef/nyc-reporter-action@0.1.0
         with:
-          delete-old-comments: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPORTER: 'text' # defaults to 'text-summary'
 
       - name: Run danger
         run: yarn run danger ci -d dangerfile.cjs

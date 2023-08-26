@@ -31,10 +31,11 @@ jobs:
       - name: Test
         run: yarn cicoverage
 
+      - name: Upload coverage
       uses: romeovs/lcov-reporter-action@v0.2.16
         with:
           lcov-file: ./coverage/lcov.info
-
+          
       - name: Run danger
         run: yarn run danger ci -d dangerfile.cjs
         env:

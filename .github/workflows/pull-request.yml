@@ -29,9 +29,7 @@ jobs:
         run: yarn lint:ci
 
       - name: Test
-        run: yarn cicoverage
-        env:
-          NODE_OPTIONS: '--no-warnings --experimental-vm-modules'
+        run: yarn test
 
       - name: NYC Coverage Report          
         uses: Tintef/nyc-reporter-action@0.1.0

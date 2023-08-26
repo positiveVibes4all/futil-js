@@ -29,13 +29,12 @@ jobs:
         run: yarn lint:ci
 
       - name: Test
-        run: yarn test
+        run: yarn cicoverage
 
-      - name: NYC Coverage Report          
-        uses: Tintef/nyc-reporter-action@0.1.0
+      - name: Report Coverage
+        uses: romeovs/lcov-reporter-action@2a28ec3e25fb7eae9cb537e9141603486f810d1a
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPORTER: 'text' # defaults to 'text-summary'
+          delete-old-comments: true
 
       - name: Run danger
         run: yarn run danger ci -d dangerfile.cjs

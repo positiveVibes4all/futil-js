@@ -35,7 +35,7 @@ jobs:
         uses: romeovs/lcov-reporter-action@2a28ec3e25fb7eae9cb537e9141603486f810d1a
         with:
           delete-old-comments: true
-          lcov-file: ./coverage/lcov.info
+          lcov-file: ../coverage/lcov.info
 
       - name: Run danger
         run: yarn run danger ci -d dangerfile.cjs

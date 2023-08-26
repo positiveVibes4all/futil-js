@@ -31,10 +31,10 @@ jobs:
       - name: Test
         run: yarn cicoverage
 
-      - name: Upload coverage
-        uses: romeovs/lcov-reporter-action@v0.2.16
+      - name: Report Coverage
+        uses: romeovs/lcov-reporter-action@2a28ec3e25fb7eae9cb537e9141603486f810d1a
         with:
-          lcov-file: ./coverage/lcov.info
+          delete-old-comments: true
 
       - name: Run danger
         run: yarn run danger ci -d dangerfile.cjs

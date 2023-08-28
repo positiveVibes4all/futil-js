@@ -34,7 +34,7 @@ jobs:
         uses: changesets/action@v1
         with:
           version: yarn version
-          publish: yarn rename futil-js-ht && yarn npm publish --tolerate-republish
+          publish: yarn npm publish --tolerate-republish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

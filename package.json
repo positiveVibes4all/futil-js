@@ -37,8 +37,8 @@
     "version": "yarn changeset version && yarn install --mode=update-lockfile"
   },
   "author": {
-    "name": "Samuel Greene",
-    "email": "sgreene@smartprocure.us"
+    "name": "hthornley-govspend",
+    "email": "hthornley@govspenc.com"
   },
   "license": "MIT",
   "dependencies": {

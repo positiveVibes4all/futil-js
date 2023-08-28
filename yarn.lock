@@ -13556,9 +13556,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"futil-js@workspace:.":
+"futil-js-ht@workspace:.":
   version: 0.0.0-use.local
-  resolution: "futil-js@workspace:."
+  resolution: "futil-js-ht@workspace:."
   dependencies:
     "@babel/cli": ^7.22.10
     "@babel/core": ^7.22.11

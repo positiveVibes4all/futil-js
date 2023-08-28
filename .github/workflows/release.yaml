@@ -32,15 +32,21 @@ jobs:
 
       - name: Release or Create Release PR
         uses: changesets/action@v1
+        id: changesets
         with:
           version: yarn version
-          publish: |
-            yarn npm publish --tolerate-republish
-            yarn rename futil-js-ht-extend
-            yarn npm publish --tolerate-republish
-            yarn run docs-site 
-            cd docs/beta
-            yarn install
-            yarn run deploy
+          publish: yarn npm publish --tolerate-republish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish Futil
+        if: steps.changesets.outputs.hasChangesets == 'false'
+        run: yarn rename futil && yarn npm publish --tolerate-republish
+
+      - name: Publish Docs
+        if: steps.changesets.outputs.hasChangesets == 'false'
+        run: | 
+          yarn run docs-site 
+          cd docs/beta
+          yarn install
+          yarn run deploy

@@ -1,5 +1,11 @@
 # futil-docs
 
+## 0.2.1
+
+### Patch Changes
+
+- 3c0f448: Test All
+
 ## 0.2.0
 
 ### Minor Changes

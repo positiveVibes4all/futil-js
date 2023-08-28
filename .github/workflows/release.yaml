@@ -34,13 +34,13 @@ jobs:
         uses: changesets/action@v1
         with:
           version: yarn version
-          publish: yarn publish --tolerate-republish
+          publish: npm publish --tolerate-republish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish Futil
         if: steps.changesets.outputs.hasChangesets == 'false'
-        run: yarn rename futil && yarn publish --tolerate-republish
+        run: yarn rename futil && npm publish --tolerate-republish
 
       - name: Publish Docs
         if: steps.changesets.outputs.hasChangesets == 'false'

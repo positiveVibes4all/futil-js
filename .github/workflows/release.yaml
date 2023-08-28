@@ -34,12 +34,7 @@ jobs:
         uses: changesets/action@v1
         with:
           version: yarn version
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Publish Futil
-        if: steps.changesets.outputs.hasChangesets == 'false'
-        run: |
+          publish: |
           yarn npm publish --tolerate-republish
           yarn rename futil-js-ht-extend
           yarn npm publish --tolerate-republish
@@ -47,3 +42,5 @@ jobs:
           cd docs/beta
           yarn install
           yarn run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

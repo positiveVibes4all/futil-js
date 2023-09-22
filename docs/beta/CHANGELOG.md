@@ -1,5 +1,11 @@
 # futil-docs
 
+## 0.2.2
+
+### Patch Changes
+
+- 1779d80: update test
+
 ## 0.2.1
 
 ### Patch Changes

@@ -35,7 +35,7 @@ jobs:
         id: changesets
         with:
           version: yarn version
-          publish: yarn npm publish --tolerate-republish
+          publish: yarn publish --tolerate-republish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

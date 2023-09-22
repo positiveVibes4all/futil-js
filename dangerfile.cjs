@@ -1,4 +1,4 @@
-import { danger, markdown, fail, message, warn } from 'danger'
+let { danger, markdown, fail, message, warn } = require('danger')
 let duti = require('duti')
 
 let args = {

@@ -12,6 +12,7 @@ let callUnlessEmptyArray = callUnlessEmpty(wrapArray)
 let dropRight = _.dropRight(1)
 let last = _.takeRight(1)
 
+
 /**
  * Joins an array after compacting. Note that due to the underlying behavior of `_.curry` no default `join` value is supported -- you must pass in some string with which to perform the join.
  *

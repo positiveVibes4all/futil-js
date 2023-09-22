@@ -1,5 +1,11 @@
 # futil-docs
 
+## 0.2.4
+
+### Patch Changes
+
+- bb09447: test
+
 ## 0.2.3
 
 ### Patch Changes

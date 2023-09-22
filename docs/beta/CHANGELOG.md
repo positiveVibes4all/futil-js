@@ -1,5 +1,11 @@
 # futil-docs
 
+## 0.2.3
+
+### Patch Changes
+
+- d8fa94b: test patch
+
 ## 0.2.2
 
 ### Patch Changes

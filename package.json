@@ -35,7 +35,7 @@
     "predocs-publish": "yarn run docs-site",
     "docs-publish": "cd docs/beta && yarn run deploy",
     "version": "yarn changeset version && yarn install --mode=update-lockfile",
-    "publish": "npm publish --tolerate-republish"
+    "publish": "yarn npm publish --tolerate-republish"
   },
   "author": {
     "name": "hthornley-govspend",

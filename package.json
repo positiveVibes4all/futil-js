@@ -1,6 +1,6 @@
 {
-  "name": "futil-js",
-  "version": "1.76.1",
+  "name": "futil-js-ht",
+  "version": "1.76.4",
   "description": "F(unctional) util(ities). Resistance is futile.",
   "main": "lib/futil-js.js",
   "scripts": {
@@ -34,8 +34,8 @@
     "publish": "yarn npm publish --tolerate-republish"
   },
   "author": {
-    "name": "Samuel Greene",
-    "email": "sgreene@smartprocure.us"
+    "name": "hthornley-govspend",
+    "email": "hthornley@govspenc.com"
   },
   "license": "MIT",
   "dependencies": {
@@ -49,6 +49,16 @@
     "plugins": [
       "@babel/plugin-transform-object-rest-spread"
     ]
+  },
+  "nycrc": {
+    "extends": "@istanbuljs/nyc-config-babel",
+    "all": true,
+    "instrument": true,
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "check-coverage": true
   },
   "prettier": {
     "semi": false,
@@ -76,6 +86,7 @@
     "eslint": "^8.24.0",
     "eslint-plugin-mocha": "^10.1.0",
     "esm": "^3.2.25",
+    "jest": "^29.4.1",
     "jsdoc": "^3.6.11",
     "karma": "^2.0.0",
     "karma-chai": "^0.1.0",
@@ -88,7 +99,7 @@
     "karma-webpack": "^3.0.0",
     "mocha": "^6.2.2",
     "mocha-lcov-reporter": "^1.2.0",
-    "nyc": "^12.0.1",
+    "nyc": "^15.1.0",
     "prettier": "^2.7.1",
     "read-pkg": "^5.2.0",
     "sinon": "^7.5.0",

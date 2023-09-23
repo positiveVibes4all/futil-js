@@ -31,6 +31,7 @@
     "docs-site": "yarn run readme && yarn run tests-json && yarn run copy-docs",
     "predocs-publish": "yarn run docs-site",
     "docs-publish": "cd docs/beta && yarn run deploy",
+    "version": "yarn changeset version && yarn install --mode=update-lockfile",
     "publish": "yarn npm publish --tolerate-republish"
   },
   "author": {

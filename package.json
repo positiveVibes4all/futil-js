@@ -38,9 +38,6 @@
     "name": "hthornley-govspend",
     "email": "hthornley@govspenc.com"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "license": "MIT",
   "dependencies": {
     "@babel/cli": "^7.22.10",

@@ -1,4 +1,11 @@
 # 1.76.1
+
+## 1.76.2
+
+### Patch Changes
+
+- 5a4e2f2: a
+- bee557d: this
 - Update searching to be case insensitive.
 
 # 1.76.0

@@ -2,7 +2,7 @@
   "name": "futil-js-ht",
   "version": "1.76.4",
   "description": "F(unctional) util(ities). Resistance is futile.",
-  "main": "lib/futil-js.js",
+  "main": "lib/futil-js-ht.js",
   "scripts": {
     "build": "webpack",
     "danger": "duti",

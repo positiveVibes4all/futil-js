@@ -5,6 +5,7 @@ import { intersperse } from './array'
 import { differentLast } from './iterators'
 import { isBlank } from './lang'
 
+
 let blankString = when(isBlank, '')
 /**
  * Wraps a string with pre and post unless content is nil (and replaces )

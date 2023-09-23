@@ -14,7 +14,6 @@ let args = {
   },
 }
 
-
 duti.prAssignee(args)
 duti.netNegativePR(args)
 duti.bigPr(args)

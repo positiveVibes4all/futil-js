@@ -59,6 +59,7 @@ export let isBlank = _.overSome([
   _.isEqual({}),
 ])
 
+
 /**
  * Opposite of `isBlank`
  *
